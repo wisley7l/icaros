@@ -1,0 +1,82 @@
+<div class="btn-group btn-group-justified">
+  <a href="#!/ListaTodos" class="btn btn-primary">Todos</a>
+  <a href="#!/ListaSub17" class="btn btn-primary">Sub 17</a>
+  <a href="#!/ListaSub15" class="active btn btn-primary">Sub 15</a>
+  <a href="#!/ListaSub13" class="btn btn-primary">Sub 13</a>
+  <a href="#!/ListaSub11" class="btn btn-primary">Sub 11</a>
+</div>
+</div>
+<div>
+<h1>Jogadores Sub 15</h1>
+</div>
+<div>
+<!--      <meta http-equiv="refresh" content="5;url=#!/Lista">-->
+    
+ <table class="table table-striped">
+    <tr></br>
+        <th> MATRICULA &nbsp</th>
+        <th> NOME  &nbsp</th>
+        <th> DATA DE NASCIMENTO  &nbsp</th>
+        <th> ALTURA &nbsp</th>
+        <th> PESO &nbsp</th>
+        <th> POSIÇÃO &nbsp</th>
+        <th> NOME DA MÃE &nbsp</th>
+        <th> NOME DO PAI &nbsp</th>
+        <th> ENDEREÇO &nbsp</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="p in Ctrl.sub15">
+        
+        <td><i>{{p.info.matricula}} &nbsp</td>
+        <td><i>{{p.info.nome_jog}} &nbsp</td>
+        <td><i>{{p.dia}}/{{p.mes}}/{{p.ano}} ({{p.idade}} anos)&nbsp</td>
+        <td><i>{{p.info.altura}} m&nbsp</td>
+        <td><i>{{p.info.peso}} Kg &nbsp</td>
+        <td><i>{{p.info.posicao}} &nbsp</td>
+        <td><i>{{p.info.nome_mae}} &nbsp</td>
+        <td><i>{{p.info.nome_pai}} &nbsp</td>
+        <td><i>{{p.info.endereco}} &nbsp</td>
+        <td >
+          
+        <md-button  aria-label="Editar"  class="md-fab md-mini md-primary" ng-click="Ctrl.popup(p.info.matricula)">
+        <span
+          class="glyphicon glyphicon-pencil"></span>
+        </md-button>
+        </td>
+        <!--
+        <td>
+        <md-button  aria-label="Remover"  class="md-fab md-mini md-primary" ng-click="Ctrl.remove(p.info.cpf)">
+            <span
+          class="glyphicon glyphicon-trash"></span>
+            </md-button></td>
+    -->
+        
+    </tr>
+    <tr>
+        <td>
+                <md-button  aria-label="Adicionar"  
+                class="md-fab md-primary" ng-click="Ctrl.Add()">
+                        <span
+                        class="glyphicon glyphicon-plus">
+                        </span>
+                        <span
+                        class="glyphicon glyphicon-user">
+                        </span>
+                </md-button>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        
+    </tr>
+    
+ </table>
+ <div>
+
+
